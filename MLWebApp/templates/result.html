@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Result</title>
+
+  <script src="https://kit.fontawesome.com/47101d2035.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <style>
+    .center {
+      position: absolute;
+      text-align: center;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: rgb(230, 239, 245);
+    }
+  </style>
+</head>
+
+<body class="center">
+
+  {% if result == 0 %}
+  <h1 style=" color: rgb(88, 90, 180); font-weight: 900;"> Alta chance de sobrevivência <
+  <h4 style=" color:rgb(101, 102, 179); font-weight: 700;"> Probabilidade de sobrevivência {{ proba }}</h4>
+
+  {% elif result == 1 %}
+  <h1 style="color: rgb(212, 85, 85); font-weight: 900;"> Alta chance de mortalidade 
+  <h4 style="color:rgb(209, 122, 122); font-weight:700;"> Probabilidade de mortalidade: {{ proba }}</h4>
+
+  {% else %}
+  <h1 style="color: rgb(31, 15, 15); font-weight: 900;">ERROR</h1>
+  {% endif %}
+
+</body>
+
+</html>
